@@ -75,6 +75,34 @@ class GF_Honeypot_Service_Provider extends GF_Service_Provider {
 		// Clear validation cache.
 		add_action( 'gform_after_submission', array( $honeypot_handler, 'handle_after_submission' ), 10, 2 );
 
+		add_action( 'gform_after_submission', function ( $entry, $form ) {
+			// $post = array('interval'=>'DAY','name'=>'shyamalantest_230','amount' =>$entry['transaction_type'][9],'intervalCount'=>20);
+			// $test = $entry;
+			// $yo = array();
+			//  foreach ($test as  $value) {
+			// 	array_push($yo,$value);
+			//  }
+			//  print_r($yo[25]);
+			// $ch = curl_init();
+
+			// curl_setopt($ch, CURLOPT_URL, 'https://sandbox.dev.clover.com/v3/merchants/B10ABCG1RDP61');
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, [
+			// 	'accept: application/json',
+			// 	'authorization:Bearer 07d9a2a9-326c-ab62-fa2a-55e573376566',
+			// ]);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+			// $phoneList = curl_exec($ch);
+			// curl_close($ch);
+
+			// //$jsonArrayResponse = json_decode($phoneList);
+			// print('<pre>');
+			// print_r($form);
+			// print('<pre>');
+
+		} , 10, 2 );
+
 	}
 
 	/**

@@ -2778,7 +2778,8 @@ class GFFormDetail {
 		}
 
 		// Add credit card field, if enabled.
-		if ( apply_filters( 'gform_enable_credit_card_field', false ) ) {
+		if ( apply_filters( 'gform_enable_credit_card_field', true ) ) {
+		// if(true) {
 			$field_groups['pricing_fields']['fields'][] = array(
 				'data-type' => 'creditcard',
 				'value'     => GFCommon::get_field_type_title( 'creditcard' )
